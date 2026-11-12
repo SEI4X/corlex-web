@@ -95,7 +95,7 @@ export class BindingController {
   }
 
   revoke(): void {
-    const expected = this.read()
+    const expected = this.active.privacy
     ++this.revision
     this.invalidate({ kind: 'valid', generation: this.active.generation, state: 'denied' })
     try {

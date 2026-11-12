@@ -79,8 +79,8 @@
     },
     {
       "path": "docs/RELEASE_SECURITY.md",
-      "sha256": "e3c391750b284f22c9688843cff5ff092a6c4769de3b978430eb035fbf1cc523",
-      "size": 1352
+      "sha256": "b958579a9b11c2c3f2f03d2b52ac553e6fcede595b7f7a9119864e131db7ae11",
+      "size": 1353
     },
     {
       "path": "docs/dependency-licenses.json",
@@ -109,8 +109,8 @@
     },
     {
       "path": "internal/core/binding/controller.ts",
-      "sha256": "022836f1449d842face24cfc5ea9fc6076a2c2e0d093dcf107ef30d70263e5ea",
-      "size": 5498
+      "sha256": "23c6ee63455b6477437de4cb4920557d24e6b5a38bbd8c7216c6d792f9057a32",
+      "size": 5506
     },
     {
       "path": "internal/core/binding/digest.test.ts",
@@ -636,6 +636,11 @@
       "path": "vitest.config.ts",
       "sha256": "24f52f01f89c2689f1542e8a350765e2a36c8e1cff1a3a2e6344fa44bbca978b",
       "size": 331
+    },
+    {
+      "path": "internal/core/binding/refusal.test.ts",
+      "sha256": "c6ef1a1b3bdcb37fd69db04121b26c344d85e3d675f9da11c3812797c074e959",
+      "size": 1098
     }
   ]
 }
