@@ -1,0 +1,60 @@
+{
+  "name": "@corlex/sdk-web",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "description": "Corlex browser analytics, consent, Remote Config and experiments",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SEI4X/corlex-web.git"
+  },
+  "homepage": "https://github.com/SEI4X/corlex-web#readme",
+  "bugs": "https://github.com/SEI4X/corlex-web/issues",
+  "files": [
+    "dist",
+    "scripts/upload-sourcemaps.mjs",
+    "scripts/with-symbols.sh",
+    "THIRD_PARTY_NOTICES",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "imports": {
+    "#core": "./internal/core/index.ts",
+    "#core/test-protocol": "./internal/core/test/protocol.ts",
+    "#remote-config": "./internal/remote-config/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc",
+    "test": "vitest run && node --test scripts/*.test.mjs",
+    "build": "tsdown && node scripts/check-snippet-size.mjs && node scripts/check-browser-bundle.mjs",
+    "pack:check": "pnpm pack --pack-destination .artifacts"
+  },
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "@noble/hashes": "2.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "eslint": "10.13.0",
+    "globals": "17.13.0",
+    "jsdom": "30.1.3",
+    "tsdown": "0.23.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.0",
+    "vitest": "5.0.5"
+  }
+}
